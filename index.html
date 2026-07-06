@@ -8,7 +8,6 @@
     <title>Moo Code</title>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
@@ -47,7 +46,6 @@
         /* FLYING COW BACKGROUND */
         /* -------------------------------- */
 
-
         .cow-sky {
             position: fixed;
             inset: 0;
@@ -58,7 +56,6 @@
 
             z-index: 0;
         }
-
 
         .flying-cow {
             position: absolute;
@@ -74,7 +71,6 @@
                 float 3s ease-in-out infinite;
         }
 
-
         .cow-one {
             top: 12%;
 
@@ -85,7 +81,6 @@
             animation-delay:
                 -4s;
         }
-
 
         .cow-two {
             top: 42%;
@@ -100,7 +95,6 @@
                 -18s;
         }
 
-
         .cow-three {
             top: 70%;
 
@@ -113,7 +107,6 @@
             animation-delay:
                 -11s;
         }
-
 
         .cow-four {
             top: 25%;
@@ -128,9 +121,7 @@
                 -25s;
         }
 
-
         @keyframes fly {
-
             from {
                 left: -150px;
 
@@ -147,12 +138,9 @@
                 transform:
                     rotate(10deg);
             }
-
         }
 
-
         @keyframes float {
-
             0%,
             100% {
                 translate: 0 0;
@@ -161,15 +149,12 @@
             50% {
                 translate: 0 -20px;
             }
-
         }
-
 
 
         /* -------------------------------- */
         /* MAIN */
         /* -------------------------------- */
-
 
         .container {
             position: relative;
@@ -183,15 +168,13 @@
 
             padding:
                 80px 0
-                220px;
+                250px;
         }
-
 
 
         /* -------------------------------- */
         /* TITLE */
         /* -------------------------------- */
-
 
         .title {
             display: flex;
@@ -201,7 +184,6 @@
 
             margin-bottom: 5px;
         }
-
 
         .title h1 {
             margin: 0;
@@ -220,7 +202,6 @@
             font-weight: 900;
         }
 
-
         .subtitle {
             text-align: center;
 
@@ -232,11 +213,9 @@
         }
 
 
-
         /* -------------------------------- */
         /* TOGGLE */
         /* -------------------------------- */
-
 
         .toggle {
             display: flex;
@@ -271,7 +250,6 @@
                 );
         }
 
-
         .toggle button {
             flex: 1;
 
@@ -291,7 +269,6 @@
                 0.25s ease;
         }
 
-
         .toggle button.active {
             background:
                 var(--ink);
@@ -299,26 +276,64 @@
             color: white;
         }
 
-
         .switch-icon {
-            font-size: 22px;
+            display: flex;
 
-            padding: 0 10px;
+            align-items: center;
+            justify-content: center;
+
+            width: 48px;
+            height: 36px;
+
+            flex: 0 0 48px;
+
+            background:
+                var(--cream);
+
+            border:
+                2px solid
+                var(--ink);
+
+            border-radius: 100px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin:
+                0 4px;
+
+            box-shadow:
+                2px 3px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
         }
-
 
 
         /* -------------------------------- */
         /* TEXT AREAS */
         /* -------------------------------- */
 
+        .text-box {
+            position: relative;
+        }
 
         textarea {
+            display: block;
+
             width: 100%;
 
             min-height: 190px;
 
-            padding: 25px;
+            padding:
+                25px;
+
+            padding-top:
+                55px;
 
             border:
                 3px solid
@@ -359,7 +374,6 @@
                 0.2s ease;
         }
 
-
         textarea:focus {
             transform:
                 translateY(-3px);
@@ -374,7 +388,6 @@
                 );
         }
 
-
         #output {
             background:
                 var(--ink);
@@ -386,13 +399,111 @@
                 var(--ink);
         }
 
+        .copy-button {
+            position: absolute;
+
+            top: 15px;
+            right: 17px;
+
+            z-index: 4;
+
+            border:
+                2px solid
+                var(--ink);
+
+            border-radius: 100px;
+
+            background:
+                var(--cream);
+
+            color:
+                var(--ink);
+
+            padding:
+                7px 13px;
+
+            font-family: inherit;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.5px;
+
+            cursor: pointer;
+
+            box-shadow:
+                2px 3px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.15
+                );
+
+            transition:
+                transform
+                0.15s ease,
+
+                box-shadow
+                0.15s ease;
+        }
+
+        .copy-button:hover {
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                3px 5px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.15
+                );
+        }
+
+        .copy-button:active {
+            transform:
+                translateY(1px);
+
+            box-shadow:
+                1px 1px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.15
+                );
+        }
+
+        .output-copy {
+            border-color:
+                var(--cream);
+
+            background:
+                var(--ink);
+
+            color:
+                var(--cream);
+
+            box-shadow:
+                2px 3px 0
+                rgba(
+                    255,
+                    248,
+                    223,
+                    0.18
+                );
+        }
 
         .arrow {
             text-align: center;
 
             font-size: 35px;
 
-            margin: 15px 0;
+            margin:
+                15px 0;
 
             animation:
                 bounce
@@ -401,9 +512,7 @@
                 infinite;
         }
 
-
         @keyframes bounce {
-
             0%,
             100% {
                 transform:
@@ -414,15 +523,139 @@
                 transform:
                     translateY(7px);
             }
-
         }
 
+
+        /* -------------------------------- */
+        /* FOOTER */
+        /* -------------------------------- */
+
+        .footer {
+            position: relative;
+
+            z-index: 3;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 45px;
+
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 16px;
+        }
+
+        .social-link {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 46px;
+            height: 46px;
+
+            border:
+                2px solid
+                var(--ink);
+
+            border-radius: 50%;
+
+            background:
+                var(--cream);
+
+            color:
+                var(--ink);
+
+            text-decoration: none;
+
+            box-shadow:
+                3px 4px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
+
+            transition:
+                transform
+                0.2s ease,
+
+                box-shadow
+                0.2s ease;
+        }
+
+        .social-link:hover {
+            transform:
+                translateY(-4px)
+                rotate(-5deg);
+
+            box-shadow:
+                5px 7px 0
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.14
+                );
+        }
+
+        .social-link svg {
+            width: 23px;
+            height: 23px;
+        }
+
+        .made-by {
+            margin: 0;
+
+            font-size: 14px;
+
+            opacity: 0.65;
+        }
+
+        .heart {
+            display: inline-block;
+
+            animation:
+                heartBeat
+                1.2s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes heartBeat {
+            0%,
+            100% {
+                transform:
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    scale(1.2);
+            }
+        }
 
 
         /* -------------------------------- */
         /* GRASS */
         /* -------------------------------- */
-
 
         .grass-wrapper {
             position: fixed;
@@ -439,7 +672,6 @@
             pointer-events: none;
         }
 
-
         .grass {
             position: absolute;
 
@@ -453,7 +685,6 @@
                 var(--green);
         }
 
-
         .grass-blades {
             position: absolute;
 
@@ -465,7 +696,6 @@
 
             overflow: hidden;
         }
-
 
         .blade {
             position: absolute;
@@ -492,9 +722,7 @@
                 alternate;
         }
 
-
         @keyframes sway {
-
             from {
                 transform:
                     rotate(-10deg);
@@ -504,27 +732,47 @@
                 transform:
                     rotate(13deg);
             }
-
         }
-
 
 
         /* -------------------------------- */
         /* MOBILE */
         /* -------------------------------- */
 
-
         @media (
             max-width: 600px
         ) {
 
             .container {
-                padding-top: 50px;
+                padding-top:
+                    50px;
+
+                padding-bottom:
+                    240px;
             }
 
-
             .title h1 {
-                letter-spacing: -3px;
+                letter-spacing:
+                    -3px;
+            }
+
+            .switch-icon {
+                width:
+                    40px;
+
+                flex-basis:
+                    40px;
+
+                margin:
+                    0 2px;
+            }
+
+            .toggle button {
+                font-size:
+                    14px;
+
+                padding:
+                    14px 8px;
             }
 
         }
@@ -537,41 +785,23 @@
 <body>
 
 
-    <!-- -------------------------------- -->
     <!-- FLYING COWS -->
-    <!-- -------------------------------- -->
-
 
     <div class="cow-sky">
 
-        <div class="
-            flying-cow
-            cow-one
-        ">
+        <div class="flying-cow cow-one">
             🐄
         </div>
 
-
-        <div class="
-            flying-cow
-            cow-two
-        ">
+        <div class="flying-cow cow-two">
             🐄
         </div>
 
-
-        <div class="
-            flying-cow
-            cow-three
-        ">
+        <div class="flying-cow cow-three">
             🐄
         </div>
 
-
-        <div class="
-            flying-cow
-            cow-four
-        ">
+        <div class="flying-cow cow-four">
             🐄
         </div>
 
@@ -579,16 +809,10 @@
 
 
 
-    <!-- -------------------------------- -->
-    <!-- MAIN -->
-    <!-- -------------------------------- -->
-
-
     <main class="container">
 
 
         <!-- TITLE -->
-
 
         <div class="title">
 
@@ -600,16 +824,14 @@
 
 
         <div class="subtitle">
-            a bovine encoding system
+            It's all a moo point!
         </div>
 
 
 
         <!-- TOGGLE -->
 
-
         <div class="toggle">
-
 
             <button
                 id="englishButton"
@@ -630,18 +852,28 @@
                 MOO CODE
             </button>
 
-
         </div>
 
 
 
         <!-- INPUT -->
 
+        <div class="text-box">
 
-        <textarea
-            id="input"
-            placeholder="Type something..."
-        ></textarea>
+            <button
+                class="copy-button"
+                id="copyInput"
+                type="button"
+            >
+                COPY
+            </button>
+
+            <textarea
+                id="input"
+                placeholder="Type something..."
+            ></textarea>
+
+        </div>
 
 
 
@@ -653,25 +885,155 @@
 
         <!-- OUTPUT -->
 
+        <div class="text-box">
 
-        <textarea
-            id="output"
-            placeholder="The cow will translate..."
-            readonly
-        ></textarea>
+            <button
+                class="
+                    copy-button
+                    output-copy
+                "
+                id="copyOutput"
+                type="button"
+            >
+                COPY
+            </button>
+
+            <textarea
+                id="output"
+                placeholder="The cow will translate..."
+                readonly
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <div class="social-links">
+
+
+                <!-- INSTAGRAM LINK GOES IN href -->
+
+                <a
+                    class="social-link"
+                    href="#"
+                    id="instagramLink"
+                    aria-label="Instagram"
+                    title="Instagram"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                            ry="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4"
+                        ></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                            fill="currentColor"
+                            stroke="none"
+                        ></circle>
+                    </svg>
+
+                </a>
+
+
+                <!-- COSMOS LINK GOES IN href -->
+
+                <a
+                    class="social-link"
+                    href="#"
+                    id="cosmosLink"
+                    aria-label="Cosmos"
+                    title="Cosmos"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        aria-hidden="true"
+                    >
+                        <ellipse
+                            cx="12"
+                            cy="12"
+                            rx="10"
+                            ry="4"
+                        ></ellipse>
+
+                        <ellipse
+                            cx="12"
+                            cy="12"
+                            rx="10"
+                            ry="4"
+                            transform="rotate(60 12 12)"
+                        ></ellipse>
+
+                        <ellipse
+                            cx="12"
+                            cy="12"
+                            rx="10"
+                            ry="4"
+                            transform="rotate(120 12 12)"
+                        ></ellipse>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="1.5"
+                            fill="currentColor"
+                            stroke="none"
+                        ></circle>
+                    </svg>
+
+                </a>
+
+            </div>
+
+
+            <p class="made-by">
+                made with
+                <span class="heart">
+                    ♥️
+                </span>
+                by Deep & ChatGPT.
+            </p>
+
+        </footer>
 
 
     </main>
 
 
 
-    <!-- -------------------------------- -->
     <!-- GRASS -->
-    <!-- -------------------------------- -->
-
 
     <div class="grass-wrapper">
-
 
         <div
             class="grass-blades"
@@ -679,10 +1041,8 @@
         >
         </div>
 
-
         <div class="grass">
         </div>
-
 
     </div>
 
@@ -739,12 +1099,6 @@
         };
 
 
-
-        /* -------------------------------- */
-        /* REVERSE MORSE */
-        /* -------------------------------- */
-
-
         const REVERSE_MORSE = {};
 
 
@@ -793,6 +1147,20 @@
             document
             .getElementById(
                 "mooButton"
+            );
+
+
+        const copyInput =
+            document
+            .getElementById(
+                "copyInput"
+            );
+
+
+        const copyOutput =
+            document
+            .getElementById(
+                "copyOutput"
             );
 
 
@@ -1053,7 +1421,7 @@
 
 
         /* -------------------------------- */
-        /* ENGLISH MODE */
+        /* MODE SWITCH */
         /* -------------------------------- */
 
 
@@ -1094,12 +1462,6 @@
 
             }
         );
-
-
-
-        /* -------------------------------- */
-        /* MOO MODE */
-        /* -------------------------------- */
 
 
         mooButton
@@ -1151,6 +1513,122 @@
         .addEventListener(
             "input",
             translate
+        );
+
+
+
+        /* -------------------------------- */
+        /* COPY TO CLIPBOARD */
+        /* -------------------------------- */
+
+
+        async function copyText(
+            textarea,
+            button
+        ) {
+
+
+            if (
+                !textarea.value
+            ) {
+
+                button.textContent =
+                    "EMPTY!";
+
+
+                setTimeout(
+                    () => {
+
+                        button.textContent =
+                            "COPY";
+
+                    },
+                    900
+                );
+
+
+                return;
+
+            }
+
+
+            try {
+
+
+                await navigator
+                    .clipboard
+                    .writeText(
+                        textarea.value
+                    );
+
+
+                button.textContent =
+                    "COPIED!";
+
+
+            }
+
+
+            catch (
+                error
+            ) {
+
+
+                textarea.select();
+
+
+                document
+                    .execCommand(
+                        "copy"
+                    );
+
+
+                button.textContent =
+                    "COPIED!";
+
+
+            }
+
+
+            setTimeout(
+                () => {
+
+                    button.textContent =
+                        "COPY";
+
+                },
+                1200
+            );
+
+
+        }
+
+
+        copyInput
+        .addEventListener(
+            "click",
+            () => {
+
+                copyText(
+                    input,
+                    copyInput
+                );
+
+            }
+        );
+
+
+        copyOutput
+        .addEventListener(
+            "click",
+            () => {
+
+                copyText(
+                    output,
+                    copyOutput
+                );
+
+            }
         );
 
 
